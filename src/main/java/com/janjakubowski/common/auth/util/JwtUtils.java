@@ -68,4 +68,11 @@ public interface JwtUtils {
      * @return mobile token
      */
     String generateMobileToken(Principal principal, String[] audience);
+
+    /**
+     * 
+     * @param decodedJWT token in raw decoded form
+     * @return Principal - authentication principal
+     */
+    Principal decodeToPrincipal(DecodedJWT decodedJWT);
 }
